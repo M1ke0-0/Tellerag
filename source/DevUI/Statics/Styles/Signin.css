@@ -1,0 +1,161 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Контейнер регистрации */
+.signin-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Заголовок */
+.signin-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.signin-header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.signin-header p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* Форма */
+.signin-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #5d6d7e;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e1e4e8;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+/* Валидация поля ввода */
+input.invalid {
+    border-color: #e74c3c;
+}
+
+input.valid {
+    border-color: #2ecc71;
+}
+
+/* Требования к паролю */
+.password-requirements {
+    display: none;
+    margin-top: 8px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border-left: 3px solid #4a90e2;
+    font-size: 12px;
+}
+
+.password-requirements p {
+    margin-bottom: 5px;
+    color: #5d6d7e;
+}
+
+.password-requirements ul {
+    padding-left: 20px;
+}
+
+.password-requirements li {
+    margin-bottom: 3px;
+    color: #7f8c8d;
+    transition: color 0.3s;
+}
+
+.password-requirements li.valid {
+    color: #2ecc71;
+}
+
+/* Сообщение об ошибке */
+.error-message {
+    display: none;
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Кнопка */
+.signin-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.signin-button:hover {
+    background-color: #3a7bc8;
+}
+
+.signin-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Футер формы */
+.signin-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #7f8c8d;
+}
+
+.signin-footer a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.signin-footer a:hover {
+    text-decoration: underline;
+}

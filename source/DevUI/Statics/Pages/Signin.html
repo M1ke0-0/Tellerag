@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELERAG Регистрация</title>
+    <link rel="stylesheet" href="../Styles/Signin.css">
+</head>
+<body>
+    <div class="signin-container">
+        <div class="signin-header">
+            <h1>TELERAG</h1>
+            <p>Создание учетной записи</p>
+        </div>
+        <form class="signin-form" id="signin-form">
+            <div class="input-group">
+                <label for="username">Имя пользователя</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+                <div class="password-requirements" id="password-requirements">
+                    <p>Пароль должен содержать:</p>
+                    <ul>
+                        <li id="req-length">Не менее 8 символов</li>
+                        <li id="req-uppercase">Минимум одну заглавную букву</li>
+                        <li id="req-lowercase">Минимум одну строчную букву</li>
+                        <li id="req-underscore">Минимум один символ подчеркивания (_)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Подтверждение пароля</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <div class="error-message" id="password-match-error">Пароли не совпадают</div>
+            </div>
+            <button type="submit" class="signin-button" id="signin-button">Зарегистрироваться</button>
+            <p class="signin-footer">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+        </form>
+    </div>
+    <script src="../Scripts/signin.js"></script>
+</body>
+</html>

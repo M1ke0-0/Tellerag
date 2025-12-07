@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELERAG Dashboard</title>
+    <link rel="stylesheet" href="../Styles/index.css">
+</head>
+<body>
+    <header>
+        <h1>TELERAG System Monitor</h1>
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+            <span class="toggle-icon light-icon">☀️</span>
+            <span class="toggle-icon dark-icon">🌙</span>
+        </button>
+    </header>
+    
+    <main>
+        <section class="metrics-overview">
+            <div class="metric-card">
+                <h3>CPU Usage</h3>
+                <div class="metric-value" id="cpu-usage">0%</div>
+                <div class="progress-bar">
+                    <div class="progress" id="cpu-progress"></div>
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <h3>Memory Usage</h3>
+                <div class="metric-value" id="memory-usage">0%</div>
+                <div class="progress-bar">
+                    <div class="progress" id="memory-progress"></div>
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <h3>Current Malloc</h3>
+                <div class="metric-value" id="current-malloc">0 MB</div>
+            </div>
+            
+            <div class="metric-card">
+                <h3>Peak Malloc</h3>
+                <div class="metric-value" id="peak-malloc">0 MB</div>
+            </div>
+            
+            <div class="metric-card load-average-card">
+                <h3>Load Average</h3>
+                <div class="load-circle-container">
+                    <div class="load-circle">
+                        <div class="load-circle-fill" id="load-circle-fill"></div>
+                        <div class="load-value" id="load-average">0.00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="processes-section">
+            <h2>Process List</h2>
+            <div class="process-filters">
+                <input type="text" id="process-search" placeholder="Search processes...">
+                <select id="process-sort">
+                    <option value="cpu">Sort by CPU</option>
+                    <option value="memory">Sort by Memory</option>
+                    <option value="pid">Sort by PID</option>
+                </select>
+            </div>
+            <div class="process-table-container">
+                <table class="process-table">
+                    <thead>
+                        <tr>
+                            <th>PID</th>
+                            <th>Name</th>
+                            <th>CPU %</th>
+                            <th>Memory %</th>
+                            <th>Threads</th>
+                            <th>I/O</th>
+                            <th>Open Files</th>
+                        </tr>
+                    </thead>
+                    <tbody id="process-list">
+                        <!-- Process list will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="api-request-section">
+            <h2>API Request</h2>
+            <div class="api-form">
+                <div class="form-row">
+                    <select id="request-method">
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                        <option value="PUT">PUT</option>
+                        <option value="DELETE">DELETE</option>
+                    </select>
+                    <input type="text" id="request-url" placeholder="Enter endpoint URL">
+                    <button id="send-request">Send</button>
+                </div>
+                <div class="form-row">
+                    <div class="request-body-container">
+                        <h4>Request Body (JSON)</h4>
+                        <textarea id="request-body" placeholder="{ }"></textarea>
+                    </div>
+                    <div class="response-container">
+                        <h4>Response</h4>
+                        <pre id="response-area">// Response will appear here</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>TELERAG System Monitor © 2025</p>
+    </footer>
+
+    <script src="../Scripts/index.js"></script>
+</body>
+</html>

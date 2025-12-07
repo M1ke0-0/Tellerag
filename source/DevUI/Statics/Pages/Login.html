@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELERAG Вход</title>
+    <link rel="stylesheet" href="../Styles/Login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>TELERAG</h1>
+            <p>Вход в систему</p>
+        </div>
+        <form class="login-form" id="login-form">
+            <div class="input-group">
+                <label for="username">Имя пользователя</label>
+                <input type="text" id="username" name="username" required>
+                <div class="error-message" id="username-error"></div>
+            </div>
+            <div class="input-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+                <div class="error-message" id="password-error"></div>
+            </div>
+            <div class="error-message" id="login-error"></div>
+            <button type="submit" class="login-button" id="login-button">Войти</button>
+        </form>
+    </div>
+    <script src="../Scripts/login.js"></script>
+</body>
+</html>
